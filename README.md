@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# AN INTERMEDIATE REACT FOLDER STRUCTURE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The root of the src fiolder contains index.(js,css) and App.js files. Other folders
+are segmented within a signle SRC folder. Helps reduce clatter and the need to search for 
+files within multiple folders.
 
-## Available Scripts
+## Pages
+Will contain index.js in the root. Each page of the application should then have its own folder 
+within the pages folder. Ie Home, About etc. This kind of structure separates page-specific code 
+from the more general global code.
 
-In the project directory, you can run:
+## Components
+The components folder will have subfolders that keep components separated into different groups
+rather than being a big blob of them. For instance, the UI folder can contain user interface 
+elements like buttons, cards, modals, etc.
 
-### `npm start`
+However, for controls that are related to forms like inputs, checkboxes, date pickers etc, they 
+are contained in the Form folder. The components folder can be broken down as you see fit but
+it should not grow very large as intricate components will be contained in the Pages folder.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Hooks
+The hooks folder stores all the global hooks that are used across various pages. Note that the pages 
+folder houses all the page-specific hooks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Assets
+Images of the project, CSS files, font files etc are stored in this folder
 
-### `npm test`
+## Context
+Context folder stores all the files used on lots of pages. This folder can however be swapped 
+with a better folder for storing Redux files if you are using Redux as a global date store.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Data
+Similar to the assets folder, this folder stores data assets such as JSON files. A file containing 
+global constant variables may be kept in this directory. These can include enviroemnent variables.
 
-### `npm run build`
+## Utils
+The Utils folder stores all the utility features including formatters. the files contained in this
+folder need to be simple. You can put pure functions in this directory but there are exceptions to this rule.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Reference:-->https://dev.to/fpaghar/folder-structuring-techniques-for-beginner-to-advanced-react-projects-30d7*
